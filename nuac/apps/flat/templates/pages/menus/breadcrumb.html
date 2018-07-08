@@ -7,17 +7,17 @@
 
     {% if not has_home and page.is_primary and forloop.first %}
     <li id="breadcrumb-menu-home">
-        <a href="{% url "home" %}">{% trans "Home" %}</a>
+        <a href="{% url "home" %}" style="color: #000;">{% trans "Home" %}</a>
     </li>
     {% endif %}
 
     {% if page.is_current_or_ascendant %}
     {% if page.is_current %}
     <li id="breadcrumb-menu-{{ page.html_id }}"
-        class="active">{{ page.title }}</li>
+        class="active" style="color: #000;">{{ page.title }}</li>
     {% else %}
     <li id="breadcrumb-menu-{{ page.html_id }}">
-        <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+        <a href="{{ page.get_absolute_url }}" style="color: #000;">{{ page.title }}</a>
     </li>
     {% endif %}
     {% if page.has_children %}{% page_menu page %}{% endif %}

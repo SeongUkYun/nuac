@@ -48,10 +48,10 @@
 		
 		{% block right_panel %}
 		<aside class="col-sm-4 col-sm-push-8">
-		{% include "blog/includes/filter_panel.html" %}
+		{# include "blog/includes/filter_panel.html" #}
 		</aside>
 		{% endblock %}
-		<div class="col-sm-8 col-sm-pull-4">
+		<div class="col-sm-12">
 			<div class="blog">
 {% if tag or category or year or month or author %}
     {% block blog_post_list_filterinfo %}
